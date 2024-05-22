@@ -1,0 +1,29 @@
+/* Custom Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #345AA1; /* Change to your desired color */
+  width: 50px; /* Adjust the size */
+  height: 50px; /* Adjust the size */
+   /* Move the prev button further left */
+}
+
+/* Adjust position for the previous button */
+.swiper-button-prev {
+  left: 40px; /* Adjust as needed to position further left */
+}
+
+/* Adjust position for the next button */
+.swiper-button-next {
+  right: 40px; /* Adjust as needed to position further right */
+}
+
+/* Optionally, add some hover effects */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color:#6892e1 ; /* Change to your desired hover color */
+}
+
+/* Ensure the buttons do not overlap the cards */
+.swiper {
+  padding: 0 60px; /* Add padding to ensure buttons do not overlap cards */
+}

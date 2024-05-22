@@ -6,6 +6,7 @@ import pic2 from "../assets/Images/pic2.png";
 import pic3 from "../assets/Images/pic3.png";
 import pic4 from "../assets/Images/pic4.png";
 
+
 export default function AboutPAge() {
   return (
     <div className="w-full flex justify-between font-poppins px-10 py-20">
