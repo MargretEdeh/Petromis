@@ -3,6 +3,7 @@ import TheWorks from "./TheWorks";
 import pic5 from "../assets/Images/pic5.png";
 import pic6 from "../assets/Images/pic6.png"
 import pic7 from "../assets/Images/pic7.png"
+import Button from "./Button";
 
 export default function WorksPage() {
   return (
@@ -24,6 +25,7 @@ export default function WorksPage() {
     ))}
        
       </div>
+      <div className="flex my-5 justify-center"> <Button size="md" className="bg-primary font-semibold text-white rounded-md px-10 py-2 ">View All...</Button> </div>
     </div>
   );
 }
