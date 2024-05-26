@@ -27,9 +27,9 @@ export default function AboutPAge() {
           to respond quickly and efficiently to our clients’ needs.
         </p>
         <div className="my-5 flex items-center gap-5">
-          <Link className="text-primary font-semibold " to="/readmore">
-            ReadMore
-          </Link>
+          <p className="text-primary font-semibold " >
+          Contact Us
+          </p>
           <div className="text-secondary gap-2 font-bold flex items-center ">
             <LiaFileDownloadSolid className="text-3xl" />{" "}
             <p>Download Brochure</p>{" "}
