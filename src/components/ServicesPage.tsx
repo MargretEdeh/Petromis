@@ -15,7 +15,7 @@ export default function ServicesPage() {
         <p className="font-bold text-xl md:text-3xl"> Services </p>
         <p className="text-sm md:text-base">Explore the our range of services</p>
       </div>
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={0}
@@ -39,7 +39,7 @@ export default function ServicesPage() {
           ))}
         </Swiper>
       </div>
-      <div>
+      <div className="block md:grid md:grid-cols-2 md: lg:hidden">
       {data.map((data) => (  
               <div key={data.text}
                 className={`rounded my-2 gap-2 bg-sub mx-8 flex items-center md:w-[310px] flex-col px-3 py-5 h-52 `}

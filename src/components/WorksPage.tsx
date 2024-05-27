@@ -12,7 +12,7 @@ export default function WorksPage() {
         <p className="font-bold text-xl md:text-3xl ">Works</p>
         <p className="text-xs md:text-base">A Unique Way Of Serving The Oil and Gas Industry</p>
       </div>
-      <div className=" w-full flex flex-col items-center  gap-y-5 my-5 md:grid md:grid-cols-3">
+      <div className=" w-full flex flex-col items-center  gap-y-5 my-5 md:grid md:grid-cols-2 lg:grid-cols-3">
       {Array.from({ length: 6 }, (_, i) => (
         <TheWorks
         key={i}

@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <div className="w-full font-poppins  h-14 flex items-center justify-between px-14 py-4  ">
       <img src={petromisLogo} alt="logo" />
-      <div className=" hidden md:flex gap-7 ">
+      <div className=" hidden lg:flex gap-7 ">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -29,12 +29,12 @@ export default function Header() {
         <NavLink to="#">Work</NavLink>
         <NavLink to="#">Request Quote</NavLink>
       </div>
-      <div className=" hidden md:flex">
+      <div className=" hidden lg:flex">
         <Button size="md" className="bg-secondary py-2 text-white rounded-md">
           Get a Quote{" "}
         </Button>
       </div>
-      <div   > <button  onClick={toggleMenu} className="text-gray-800">
+      <div  className="block lg:hidden"  > <button  onClick={toggleMenu} className="text-gray-800">
            <MdMenu className="text-2xl"/>
           </button>
           </div>
