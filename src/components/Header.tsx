@@ -3,31 +3,68 @@ import petromisLogo from "../assets/Images/petromisLogo.png";
 import { NavLink } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import Button from "./Button";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState('home');
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const handleSetActiveLink = (link: string) => {
+    setActiveLink(link);
+    setIsMenuOpen(false); // Close menu on mobile after clicking a link
+  };
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, link: string) => {
+    e.preventDefault();
+    document.getElementById(link)?.scrollIntoView({ behavior: 'smooth' });
+    handleSetActiveLink(link);
+  };
+
 
   return (
     <div className="w-full font-poppins  h-14 flex items-center justify-between px-14 py-4  ">
       <img src={petromisLogo} alt="logo" />
       <div className=" hidden lg:flex gap-7 ">
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? "text-primary border-b-2 border-b-primary" : ""
-          }
-          end
+      <div className="hidden lg:flex gap-7">
+        <a
+          href="#home"
+          className={`cursor-pointer ${activeLink === 'home' ? 'text-primary border-b-2 border-b-primary' : ''}`}
+          onClick={(e) => handleLinkClick(e, 'home')}
         >
           Home
-        </NavLink>
-        <NavLink to="#">About Petromis</NavLink>
-        <NavLink to="#">Services</NavLink>
-        <NavLink to="#">Work</NavLink>
-        <NavLink to="#">Request Quote</NavLink>
+        </a>
+        <a
+          href="#about"
+          className={`cursor-pointer ${activeLink === 'about' ? 'text-primary border-b-2 border-b-primary' : ''}`}
+          onClick={(e) => handleLinkClick(e, 'about')}
+        >
+          About Petromis
+        </a>
+        <a
+          href="#services"
+          className={`cursor-pointer ${activeLink === 'services' ? 'text-primary border-b-2 border-b-primary' : ''}`}
+          onClick={(e) => handleLinkClick(e, 'services')}
+        >
+          Services
+        </a>
+        <a
+          href="#work"
+          className={`cursor-pointer ${activeLink === 'work' ? 'text-primary border-b-2 border-b-primary' : ''}`}
+          onClick={(e) => handleLinkClick(e, 'work')}
+        >
+          Work
+        </a>
+        <a
+          href="#request-quote"
+          className={`cursor-pointer ${activeLink === 'request-quote' ? 'text-primary border-b-2 border-b-primary' : ''}`}
+          onClick={(e) => handleLinkClick(e, 'request-quote')}
+        >
+          Request Quote
+        </a>
+      </div>
+      
       </div>
       <div className=" hidden lg:flex">
         <Button size="md" className="bg-secondary py-2 text-white rounded-md">
@@ -66,21 +103,41 @@ export default function Header() {
           </button>
         </div>
         <nav className="flex flex-col gap-7 p-4">
-          <NavLink to="/" onClick={toggleMenu} className="text-primary">
+          <a
+            href="#home"
+            className={`cursor-pointer ${activeLink === 'home' ? 'text-primary border-b-2 border-b-primary' : ''}`}
+            onClick={(e) => handleLinkClick(e, 'home')}
+          >
             Home
-          </NavLink>
-          <NavLink to="#" onClick={toggleMenu} className="text-primary">
+          </a>
+          <a
+            href="#about"
+            className={`cursor-pointer ${activeLink === 'about' ? 'text-primary border-b-2 border-b-primary' : ''}`}
+            onClick={(e) => handleLinkClick(e, 'about')}
+          >
             About Petromis
-          </NavLink>
-          <NavLink to="#" onClick={toggleMenu} className="text-primary">
+          </a>
+          <a
+            href="#services"
+            className={`cursor-pointer ${activeLink === 'services' ? 'text-primary border-b-2 border-b-primary' : ''}`}
+            onClick={(e) => handleLinkClick(e, 'services')}
+          >
             Services
-          </NavLink>
-          <NavLink to="#" onClick={toggleMenu} className="text-primary">
+          </a>
+          <a
+            href="#work"
+            className={`cursor-pointer ${activeLink === 'work' ? 'text-primary border-b-2 border-b-primary' : ''}`}
+            onClick={(e) => handleLinkClick(e, 'work')}
+          >
             Work
-          </NavLink>
-          <NavLink to="#" onClick={toggleMenu} className="text-primary">
+          </a>
+          <a
+            href="#request-quote"
+            className={`cursor-pointer ${activeLink === 'request-quote' ? 'text-primary border-b-2 border-b-primary' : ''}`}
+            onClick={(e) => handleLinkClick(e, 'request-quote')}
+          >
             Request Quote
-          </NavLink>
+          </a>
         </nav>
       </div>
           
