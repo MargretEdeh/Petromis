@@ -1,6 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { LiaFileDownloadSolid } from "react-icons/lia";
+
 import pic1 from "../assets/Images/pic1.png";
 import pic2 from "../assets/Images/pic2.png";
 import pic3 from "../assets/Images/pic3.png";

@@ -1,9 +1,7 @@
 import React, {useState} from "react";
 import petromisLogo from "../assets/Images/petromisLogo.png";
-import { NavLink } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import Button from "./Button";
-import { Link as ScrollLink } from "react-scroll";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

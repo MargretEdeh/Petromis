@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ovalpic from "../assets/Images/ovalpic.png"
 
 export default function FreeQuote() {

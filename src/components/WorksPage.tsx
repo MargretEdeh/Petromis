@@ -1,8 +1,5 @@
-import React from "react";
 import TheWorks from "./TheWorks";
-import pic5 from "../assets/Images/pic5.png";
 import pic6 from "../assets/Images/pic6.png"
-import pic7 from "../assets/Images/pic7.png"
 import Button from "./Button";
 
 export default function WorksPage() {

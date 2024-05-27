@@ -1,4 +1,3 @@
-import React from "react";
 import bgRectangle from "../assets/Images/BgRectangle.png"
 
 export default function HeroSection() {
