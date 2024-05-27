@@ -7,12 +7,12 @@ import Button from "./Button";
 
 export default function WorksPage() {
   return (
-    <div className="bg-white flex flex-col w-full py-10 px-10">
+    <div className="bg-white flex flex-col w-full py-10 px-5 md:px-10">
       <div className="flex flex-col items-center text-primary">
-        <p className="font-bold text-3xl ">Works</p>
-        <p>A Unique Way Of Serving The Oil and Gas Industry</p>
+        <p className="font-bold text-xl md:text-3xl ">Works</p>
+        <p className="text-xs md:text-base">A Unique Way Of Serving The Oil and Gas Industry</p>
       </div>
-      <div className=" w-full gap-y-5 my-5 grid grid-cols-3">
+      <div className=" w-full flex flex-col items-center  gap-y-5 my-5 md:grid md:grid-cols-3">
       {Array.from({ length: 6 }, (_, i) => (
         <TheWorks
         key={i}
@@ -25,7 +25,7 @@ export default function WorksPage() {
     ))}
        
       </div>
-      <div className="flex my-5 justify-center"> <Button size="md" className="bg-primary font-semibold text-white rounded-md px-10 py-2 ">View All...</Button> </div>
+      <div className="flex my-5 justify-center"> <Button size="md" className="bg-primary font-semibold text-white rounded-md md:px-10 py-2 ">View All...</Button> </div>
     </div>
   );
 }

@@ -3,8 +3,8 @@ import ovalpic from "../assets/Images/ovalpic.png"
 
 export default function FreeQuote() {
   return (
-    <div className='px-10 py-20 flex items-center justify-between w-full'>
-        <div className='w-1/2'>
+    <div className='md:px-10 px-5 py-20 flex flex-col md:flex-row items-center justify-between w-full'>
+        <div className='md:w-1/2'>
             <div className='text-secondary' >
                 <p className='text-2xl font-bold'>Get Free Quote</p>
                 <p>Get a Free Quote and Let's Make It Happen</p>
@@ -18,8 +18,8 @@ export default function FreeQuote() {
             </form>
 
         </div>
-        <div className='w-1/2 flex justify-end'>
-            <img className='   border-8 shadow-2xl object-cover rounded-tl-full border-secondary w-[70%]' src={ovalpic} alt='pic'/>
+        <div className='md:w-1/2 flex justify-center md:justify-end'>
+            <img className='   border-8 shadow-2xl object-cover rounded-tl-full border-secondary md:w-[70%]' src={ovalpic} alt='pic'/>
         </div>
     </div>
   )

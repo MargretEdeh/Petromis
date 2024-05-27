@@ -7,7 +7,7 @@ export const data = [
     title: "Metal Recycling",
     content:
       "Key player in the Metals Recycling industry, promoting environmental responsibility and resource efficiency.",
-    bgcolor: "secondary",
+    bgcolor: "sub",
     text:"white"
   },
   {
@@ -21,7 +21,7 @@ export const data = [
     icons: <MdAutorenew />,
     title: "Renewable Energy",
     content: "The company contributes to the development and implementation of clean and sustainable energy solutions, playing a pivotal role in Nigeria's transition to a greener future.",
-    bgcolor: "secondary",
+    bgcolor: "sub",
     text:"white"
   },
   {
