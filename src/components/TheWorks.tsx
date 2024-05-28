@@ -1,23 +1,39 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+/* import { Link } from 'react-router-dom'; */
 
 interface TheWorksProps {
   img: string;
   content: string;
   sub: string;
   link: string;
-  bgcolor?:string
+  bgcolor?: string;
 }
 
-const TheWorks: React.FC<TheWorksProps> = ({ img, content, sub, link, bgcolor }) => {
+const TheWorks: React.FC<TheWorksProps> = ({
+  img,
+  content,
+  sub,
+  /*   link, */
+  bgcolor,
+}) => {
   return (
     <div className=" md:w-[90%] shadow-2xl rounded-xl">
-      <img className=" object-cover " src={img} />
+      <img className="object-cover w-full" src={img} />
       <div className="px-5 flex py-3  flex-col items-start font-semibold gap-3 ">
         <p className={`bg-${bgcolor} py-1 px-2 rounded-lg`}>{sub} </p>
-        <p>{content} </p>
+        <p
+          style={{
+            height: '200px',
+            overflowY: 'auto',
+          }}
+        >
+          {content}{' '}
+        </p>
       </div>
-      <div className=" flex p-3 text-primary justify-end ">  <Link to={link}>Learn more </Link>  </div>
+      {/*  <div className=" flex p-3 text-primary justify-end ">
+        {' '}
+        <Link to={link}>Learn more </Link>{' '}
+      </div> */}
     </div>
   );
 };
