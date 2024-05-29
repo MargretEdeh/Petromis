@@ -1,5 +1,6 @@
-import { Route, Routes } from 'react-router-dom';
-import LayoutPage from './pages/LayoutPage';
+import { Routes, Route } from "react-router-dom";
+import LayoutPage from "./pages/LayoutPage";
+
 function App() {
   return (
     <>
